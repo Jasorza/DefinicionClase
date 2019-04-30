@@ -4,26 +4,26 @@ using System.Text;
 
 namespace DefinicionClase
 {
-    class Persona
+    public class Persona
     {
-        #region propiedad
+        //Es para definir todas las propiedades
+        #region Propiedades
         public int Edad { get; set; }
         public string Nombre { get; set; }
         #endregion
 
         public void IngresarPersona()
         {
-            Console.WriteLine("Ingrese su nombre");
+            Console.WriteLine("Ingresar su nombre");
             Nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese su edad");
+            Console.WriteLine("Ingresar su Edad");
             Edad = Convert.ToInt32(Console.ReadLine());
         }
-
         public void ListarPersonas(List<Persona> users)
         {
             foreach (var item in users)
             {
-                Console.WriteLine($"Nombre: {item.Nomnre} Edad: {item.Edad}");
+                Console.WriteLine($"Nombre: {item.Nombre} Edad: {item.Edad}");
             }
         }
     }
